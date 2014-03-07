@@ -15,7 +15,7 @@ object Application extends Controller {
 
 
 	def index = Action {
-    Redirect(routes.Application.tasks)
+    Redirect("routes.Application.tasks")
   }
 
   def tasks = Action {

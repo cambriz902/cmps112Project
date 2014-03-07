@@ -8,7 +8,15 @@ CREATE TABLE task (
     label varchar(255)
 );
  
+create table user (
+  email                     varchar(255) not null primary key,
+  name                      varchar(255) not null,
+  password                  varchar(255) not null
+);
+
 # --- !Downs
  
 DROP TABLE task;
 DROP SEQUENCE task_id_seq;
+DROP TABLE if exists user;
+
