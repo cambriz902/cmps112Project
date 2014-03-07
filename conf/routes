@@ -3,12 +3,18 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
+GET     /                           controllers.Login.login
 
 # Tasks          
 GET     /tasks                  controllers.Application.tasks
 POST    /tasks                  controllers.Application.newTask
 POST    /tasks/:id/delete       controllers.Application.deleteTask(id: Long)
+
+
+# Authentication
+GET     /login                              controllers.Login.login
+POST    /login                              controllers.Login.authenticate
+GET     /logout                             controllers.Login.logout
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
